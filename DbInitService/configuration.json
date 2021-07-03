@@ -1,0 +1,6 @@
+{
+	"CsvLocation": "file:./demoDbInput.csv",
+    "MongoDbConnectionString": "mongodb://mongo:27017",
+    "DbName": "textHunt",
+    "InitCol": "unprocessedItemsCollection"
+}

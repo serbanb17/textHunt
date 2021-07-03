@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "8e49985d-3ed6-4a5b-b33c-2af5816a48a0",
+		"name": "StemmingService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StemWord",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/american",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"american"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

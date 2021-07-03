@@ -1,0 +1,69 @@
+version: "3.8"
+services:
+    coordinator:
+        build:
+            context: ../CoordinatorService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/CoordinatorService.dockerfile"
+        ports:
+            - "3000:3000"
+        environment:
+            - ASPNETCORE_URLS=http://+:3000
+            - DbInitServiceUrl=http://dbinit:6000
+            - StemmingServiceUrl=http://stemmingservice0:5000
+            - MongoDbConnectionString=mongodb://mongo:27017
+    worker1:
+        build:
+            context: ../WorkerService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/WorkerService1.dockerfile"
+        environment:
+            - ASPNETCORE_URLS=http://+:4001
+            - StemmingServiceUrl=http://stemmingservice1:5001
+            - CoordinatorServiceUrl=http://coordinator:3000
+            - MongoDbConnectionString=mongodb://mongo:27017
+        ports:
+            - "4001:4001"
+    worker2:
+        build:
+            context: ../WorkerService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/WorkerService2.dockerfile"
+        environment:
+            - ASPNETCORE_URLS=http://+:4002
+            - StemmingServiceUrl=http://stemmingservice2:5002
+            - CoordinatorServiceUrl=http://coordinator:3000
+            - MongoDbConnectionString=mongodb://mongo:27017
+        ports:
+            - "4002:4002"
+    dbinit:
+        build:
+            context: ../DbInitService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/DbInitService.dockerfile"
+        ports:
+            - "6000:6000"
+    stemmingservice0:
+        build:
+            context: ../StemmingService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/StemmingService.dockerfile"
+        environment:
+            - appPort=5000
+        ports:
+            - "5000:5000"
+    stemmingservice1:
+        build:
+            context: ../StemmingService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/StemmingService.dockerfile"
+        environment:
+            - appPort=5001
+        ports:
+            - "5001:5001"
+    stemmingservice2:
+        build:
+            context: ../StemmingService
+            dockerfile: "D:/faculta/textHunt/dockerfiles/StemmingService.dockerfile"
+        environment:
+            - appPort=5002
+        ports:
+            - "5002:5002"
+    mongo:
+        image: mongo:4.2.9
+        ports:
+            - "27017:27017"

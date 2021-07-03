@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "f890a8a5-f317-42c8-9a13-f9b72d437121",
+		"name": "WorkerService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "StemCommand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"stem\",\r\n    \"Arguments\": [\"5f61ee87778d005b1bb44a38\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CountWordsCommand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"countwords\",\r\n    \"Arguments\": [\"5f61ee87778d005b1bb44a38\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ComputeVectorCommand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"computevector\",\r\n    \"Arguments\": [\"5f61ee87778d005b1bb44a38\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ComputeWeightsCommand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"computeweights\",\r\n    \"Arguments\": [\"morn\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IsBusy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/command/isbusy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"command",
+						"isbusy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

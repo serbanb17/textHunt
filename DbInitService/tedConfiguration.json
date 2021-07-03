@@ -1,0 +1,6 @@
+{
+	"CsvLocation": "https://raw.githubusercontent.com/deangelacgn/TEDFinder/master/tedfinder/website/static/data/transcripts.csv",
+    "MongoDbConnectionString": "mongodb://localhost:27017",
+    "DbName": "textHunt",
+    "InitCol": "unprocessedItemsCollection"
+}

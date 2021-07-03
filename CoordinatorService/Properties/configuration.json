@@ -1,0 +1,11 @@
+{
+    "DbInitServiceUrl": "http://localhost:6000",
+    "StemmingServiceUrl": "http://localhost:5000",
+    "MongoDbConnectionString": "mongodb://localhost:27017",
+    "DbName": "textHunt",
+    "InitCol": "unprocessedItemsCollection",
+    "StemmedCol": "stemmedItemsCollection",
+    "WordsCountCol": "wordsCountCollection",
+    "WeightsCol": "weightsCollection",
+    "VectorsCol": "vectorsCollection"
+}

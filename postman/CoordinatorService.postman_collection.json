@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "a25025a7-9803-469b-a1c2-3fd0db5a2282",
+		"name": "CoordinatorService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterWorker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"asfasdf3\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/workerendpoint/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workerendpoint",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IsBusy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/command/isbusy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command",
+						"isbusy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuildIndex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"buildindex\",\r\n    \"Arguments\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetResult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"982ddeb7-7768-496c-9fc7-0b912c482b11\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/command/getresult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command",
+						"getresult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCommand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Command\": \"search\",\r\n    \"Arguments\": [\"born\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/command/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItemUrl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"60a16308e4da207be0cb2d01\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/command/getitemurl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"command",
+						"getitemurl"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
